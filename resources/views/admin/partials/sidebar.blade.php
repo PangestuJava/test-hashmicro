@@ -16,9 +16,27 @@
             <li class="nav-item">
                 <a href="{{ route('category.index') }}"
                     class="nav-link {{ request()->segment(1) == 'category' ? 'active' : '' }}">
-                    <i class="nav-icon fa fa-users"></i>
+                    <i class="nav-icon fas fa-inbox"></i>
                     <p>
-                        Category
+                        Categories
+                    </p>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="{{ route('product.index') }}"
+                    class="nav-link {{ request()->segment(1) == 'product' ? 'active' : '' }}">
+                    <i class="nav-icon fas fa-barcode"></i>
+                    <p>
+                        Products
+                    </p>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="{{ route('compare.index') }}"
+                    class="nav-link {{ request()->segment(1) == 'compare' ? 'active' : '' }}">
+                    <i class="nav-icon fas fa-columns"></i>
+                    <p>
+                        Comparison
                     </p>
                 </a>
             </li>

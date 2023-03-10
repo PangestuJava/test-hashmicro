@@ -2,13 +2,12 @@
 
 namespace App\Models;
 
-use App\Models\Product;
+use App\Models\Category;
 use Illuminate\Support\Str;
 use Illuminate\Database\Eloquent\Model;
-use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 
-class Category extends Model
+class Product extends Model
 {
     use HasFactory;
 
@@ -16,16 +15,16 @@ class Category extends Model
 
     public $incrementing = false;
 
-    protected $table = 'categories';
-
     protected $fillable = [
         'uuid',
+        'category_id',
         'name',
+        'stock'
     ];
 
-    public function product()
+    public function category()
     {
-        return $this->hasMany(Product::class);
+        return $this->belongsTo(Category::class);
     }
 
     protected static function boot()
