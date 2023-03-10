@@ -5,6 +5,7 @@ use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\Admin\ProductController;
 use App\Http\Controllers\Auth\ProviderController;
 use App\Http\Controllers\Admin\CategoryController;
+use App\Http\Controllers\Admin\NumberedController;
 use App\Http\Controllers\Admin\ComparisonController;
 
 /*
@@ -46,6 +47,9 @@ Route::middleware('auth', 'verified')->group(function () {
 
     Route::get('/compare', [ComparisonController::class, 'index'])->name('compare.index');
     Route::post('/compare', [ComparisonController::class, 'store'])->name('compare.store');
+
+    Route::get('/number-to-word', [NumberedController::class, 'index'])->name('numbered');
+    Route::post('/number-to-word', [NumberedController::class, 'convert'])->name('numbered.convert');
 });
 
 require __DIR__ . '/auth.php';

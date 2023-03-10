@@ -40,31 +40,6 @@
                     </p>
                 </a>
             </li>
-            {{-- <li class="nav-item">
-                <a href="{{ route('product') }}" class="nav-link">
-                    <i class="nav-icon fas fa-barcode"></i>
-                    <p>
-                        Products (json)
-                    </p>
-                </a>
-            </li>
-            <li class="nav-item">
-                <a href="{{ route('api.users') }}" class="nav-link">
-                    <i class="nav-icon fas fa-inbox"></i>
-                    <p>
-                        API Users (json)
-                    </p>
-                </a>
-            </li>
-            <li class="nav-item">
-                <a href="{{ route('swapping') }}"
-                    class="nav-link {{ request()->segment(1) == 'swapping' ? 'active' : '' }}">
-                    <i class="nav-icon fas fa-columns"></i>
-                    <p>
-                        Swapping Variable
-                    </p>
-                </a>
-            </li>
             <li class="nav-item">
                 <a href="{{ route('numbered') }}"
                     class="nav-link {{ request()->segment(1) == 'number-to-word' ? 'active' : '' }}">
@@ -73,7 +48,7 @@
                         Numbered
                     </p>
                 </a>
-            </li> --}}
+            </li>
             <!-- Authentication -->
             <li class="nav-item">
                 <form method="POST" action="{{ route('logout') }}" class="nav-link nav-item">
