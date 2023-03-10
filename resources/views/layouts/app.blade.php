@@ -32,7 +32,7 @@
         <!-- Main Sidebar Container -->
         <aside class="main-sidebar sidebar-dark-primary elevation-4">
             <!-- Brand Logo -->
-            <a href="{{ route('users.index') }}" class="brand-link">
+            <a href="{{ route('category.index') }}" class="brand-link">
                 <img src="{{ asset('assets/dist/img/AdminLTELogo.png') }}" alt="AdminLTE Logo"
                     class="brand-image img-circle elevation-3" style="opacity: .8">
                 <span class="brand-text font-weight-light">{{ config('app.name') }}</span>
@@ -120,6 +120,13 @@
         }).buttons().container().appendTo('#example1_wrapper .col-md-6:eq(0)');
     });
     </script>
+    <script>
+        window.setTimeout(function() {
+                $(".alert").fadeTo(500, 0).slideUp(500, function() {
+                    $(this).remove();
+                })
+            }, 3000)
+    </Script>
 </body>
 
 </html>
